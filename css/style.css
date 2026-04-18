@@ -1,0 +1,419 @@
+/* --- CSS Reset & Basics --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif; 
+  color: #333;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- Navigation --- */
+.navbar {
+  background-color: #1e293b;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-bold {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.logo-light {
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #94a3b8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* --- Hero Section - Background Image --- */
+.hero {
+  position: relative;
+  background: url('../images/front.jpg') center center / cover no-repeat;
+  background-color: #0f172a; /* fallback */
+  color: white;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+/* Industrial Grid Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.8) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  max-width: 500px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #4da6ff;
+  text-shadow: 0 0 10px rgba(77, 166, 255, 0.3);
+}
+
+.hero p {
+  max-width: 450px;
+  margin-bottom: 30px;
+  color: #e2e8f0;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* --- Buttons --- */
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #0284c7;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0369a1;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-submit {
+  background-color: #0284c7;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #0369a1;
+}
+
+/* --- Animated Trust Section (Local Client Logos) --- */
+.trust-section {
+  text-align: center;
+  padding: 50px 20px; /* Slightly more padding for breathing room */
+  background-color: #0f172a; /* Deep aerospace blue-black */
+  overflow: hidden; 
+}
+
+.trust-section h2 {
+  font-size: 0.9rem;
+  color: #94a3b8; /* Lighter slate color for contrast */
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.ticker-window {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 80px; 
+  padding-right: 80px; 
+  width: max-content; 
+  animation: scrollLeft 25s linear infinite; 
+}
+
+.client-logo {
+  height: 40px; 
+  width: auto;
+  /* Turns any color into pure white, then dims it to look like silver */
+  filter: brightness(0) invert(1) opacity(40%); 
+  transition: all 0.4s ease; 
+}
+
+a:hover .client-logo {
+  /* Glows to bright white on hover */
+  filter: brightness(0) invert(1) opacity(100%); 
+  transform: scale(1.05);
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* --- Team Section --- */
+.team-section {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: left;
+}
+
+.team-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.card-info h3 {
+  margin-bottom: 5px;
+}
+
+.card-info p {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #1e293b;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  color: white;
+}
+
+.contact-text {
+  flex: 1;
+  padding: 40px;
+}
+
+.contact-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.contact-text p {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 40px;
+  background-color: #0f172a;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 40px 20px 20px 20px;
+  font-size: 0.85rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-brand {
+  flex: 2;
+  min-width: 250px;
+}
+
+.footer-brand p {
+  margin-top: 15px;
+  max-width: 250px;
+}
+
+.footer-links, .footer-info {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer h4 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legal-links a {
+  color: #cbd5e1;
+  margin-left: 15px;
+}
+
+/* --- Simple Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .nav-container, .contact-container, .form-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav-links {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-text, .contact-form {
+    padding: 20px;
+  }
+}
