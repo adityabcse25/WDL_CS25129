@@ -1,5 +1,5 @@
 /* -----------------------------------
-   Services Page Custom Styles
+   Services Page Custom Styles Made By   Aditya Y.Bhurse using external css file
    ----------------------------------- */
 
 .srv-header {
@@ -44,7 +44,7 @@
 
 /* --- Split Layout for Core Capabilities --- */
 .srv-wrap {
-  background-color: #0f172a; /* Deep aerospace dark blue */
+  background-color: #0f172a; /* Deep aerospace dark blue color for background */
   padding: 100px 20px;
   overflow: hidden;
 }
@@ -61,7 +61,7 @@
   margin-bottom: 0;
 }
 
-/* Alternate left/right for an organic human-designed feel */
+/* Alternate left/right for an organic human-designed feel --- used ai here*/
 .srv-feature:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -80,7 +80,7 @@
   z-index: 2;
 }
 
-/* The offset frame behind the image */
+/* BACK SIDE IMAGE CODE */
 .srv-decorator {
   position: absolute;
   top: -20px;
@@ -134,7 +134,6 @@
   margin-bottom: 25px;
 }
 
-/* Feature Spec Cards */
 .spec-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -175,7 +174,7 @@
   font-weight: 600;
 }
 
-/* Mobile responsive */
+/* To Make it Mobile responsive */
 @media (max-width: 900px) {
   .srv-feature, .srv-feature:nth-child(even) {
     flex-direction: column;
