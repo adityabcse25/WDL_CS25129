@@ -1,4 +1,3 @@
-/* --- CSS Reset & Basics --- */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +23,7 @@ ul {
   list-style: none;
 }
 
-/* --- Navigation --- */
+/* --- Navigation Bar --- */
 .navbar {
   background-color: #1e293b;
   color: white;
@@ -69,11 +68,11 @@ ul {
   color: white;
 }
 
-/* --- Hero Section - Background Image --- */
+/* --- Hero Section For Background Image --- */
 .hero {
   position: relative;
   background: url('../images/front.jpg') center center / cover no-repeat;
-  background-color: #0f172a; /* fallback */
+  background-color: #0f172a;
   color: white;
   padding: 100px 20px;
   overflow: hidden;
@@ -91,9 +90,6 @@ ul {
   z-index: 0;
   pointer-events: none;
 }
-
-
-
 
 .hero-overlay {
   position: absolute;
@@ -133,7 +129,7 @@ ul {
   gap: 15px;
 }
 
-/* --- Buttons --- */
+/* --- Buttons for form --- */
 .btn {
   padding: 10px 20px;
   border-radius: 4px;
@@ -176,11 +172,11 @@ ul {
   background-color: #0369a1;
 }
 
-/* --- Animated Trust Section (Local Client Logos) --- */
+/* --- Logo of clients --- */
 .trust-section {
   text-align: center;
-  padding: 50px 20px; /* Slightly more padding for breathing room */
-  background-color: #0f172a; /* Deep aerospace blue-black */
+  padding: 50px 20px; 
+  background-color: #0f172a; /* Deep aerospace blue-black  color*/
   overflow: hidden; 
 }
 
@@ -208,13 +204,11 @@ ul {
 .client-logo {
   height: 40px; 
   width: auto;
-  /* Turns any color into pure white, then dims it to look like silver */
   filter: brightness(0) invert(1) opacity(40%); 
   transition: all 0.4s ease; 
 }
 
 a:hover .client-logo {
-  /* Glows to bright white on hover */
   filter: brightness(0) invert(1) opacity(100%); 
   transform: scale(1.05);
 }
@@ -278,7 +272,7 @@ a:hover .client-logo {
   font-style: italic;
 }
 
-/* --- Contact Section --- */
+/* --- Contact Section  Made in footer--- */
 .contact-section {
   background-color: #f8f9fa;
   padding: 60px 20px;
@@ -396,7 +390,7 @@ input, textarea {
   margin-left: 15px;
 }
 
-/* --- Simple Responsive Adjustments --- */
+/* --- Simple Responsive Adjustments Used AI here--- */
 @media (max-width: 768px) {
   .nav-container, .contact-container, .form-row {
     flex-direction: column;
