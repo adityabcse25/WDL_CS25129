@@ -9,14 +9,8 @@
   align-items: center;
   justify-content: center;
   /* Cool aerospace manufacturing background */
-  background: url('../images/header.jpg') no-repeat center center/cover;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.6) 100%), url('../images/header.jpg') no-repeat center center/cover;
   background-attachment: fixed;
-}
-
-.srv-header-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.6) 100%);
 }
 
 .srv-header-content {
@@ -42,6 +36,12 @@
   line-height: 1.6;
 }
 
+.srv-header .btn {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  padding: 15px 30px;
+}
+
 /* --- Split Layout for Core Capabilities --- */
 .srv-wrap {
   background-color: #0f172a; /* Deep aerospace dark blue */
@@ -50,11 +50,7 @@
 }
 
 .srv-feature {
-  max-width: 1100px;
-  margin: 0 auto 120px auto;
-  display: flex;
-  align-items: center;
-  gap: 60px;
+  margin-bottom: 120px;
 }
 
 .srv-feature:last-child {
@@ -67,7 +63,6 @@
 }
 
 .srv-image-box {
-  flex: 1;
   position: relative;
 }
 
@@ -103,31 +98,14 @@
   right: -20px;
 }
 
-.srv-text-box {
-  flex: 1;
-}
-
-.srv-tag {
-  display: inline-block;
-  padding: 6px 14px;
-  background-color: rgba(2, 132, 199, 0.1);
-  color: #0284c7;
-  font-size: 0.85rem;
-  font-weight: bold;
-  border-radius: 50px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-.srv-text-box h2 {
+.srv-feature h2 {
   font-size: 2.2rem;
   color: #ffffff;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
-.srv-text-box p {
+.srv-feature p {
   color: #94a3b8;
   font-size: 1.05rem;
   line-height: 1.7;
@@ -175,13 +153,3 @@
   font-weight: 600;
 }
 
-/* Mobile responsive */
-@media (max-width: 900px) {
-  .srv-feature, .srv-feature:nth-child(even) {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .srv-image-box, .srv-text-box {
-    width: 100%;
-  }
-}

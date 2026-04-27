@@ -27,20 +27,6 @@ ul {
 /* --- Navigation --- */
 .navbar {
   background-color: #1e293b;
-  color: white;
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .logo-bold {
@@ -54,60 +40,14 @@ ul {
   color: #94a3b8;
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: #cbd5e1;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: white;
-}
-
 /* --- Hero Section - Background Image --- */
 .hero {
-  position: relative;
-  background: url('../images/front.jpg') center center / cover no-repeat;
+  background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.8) 100%), linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px), url('../images/front.jpg') center center / cover no-repeat;
+  background-size: auto, 40px 40px, 40px 40px, cover;
   background-color: #0f172a; /* fallback */
   color: white;
   padding: 100px 20px;
   overflow: hidden;
-}
-
-/* Industrial Grid Overlay */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
-  z-index: 0;
-  pointer-events: none;
-}
-
-
-
-
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.8) 100%);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  max-width: 1100px;
-  margin: 0 auto;
-  z-index: 3;
 }
 
 .hero h1 {
@@ -128,51 +68,8 @@ ul {
   color: #e2e8f0;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-}
-
 /* --- Buttons --- */
-.btn {
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  border: 1px solid transparent;
-  font-size: 0.9rem;
-  display: inline-block;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #0284c7;
-  color: white;
-}
-
 .btn-primary:hover {
-  background-color: #0369a1;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: white;
-  border-color: white;
-}
-
-.btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.btn-submit {
-  background-color: #0284c7;
-  color: white;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.btn-submit:hover {
   background-color: #0369a1;
 }
 
@@ -189,11 +86,6 @@ ul {
   color: #94a3b8; /* Lighter slate color for contrast */
   margin-bottom: 40px;
   letter-spacing: 2px;
-}
-
-.ticker-window {
-  width: 100%;
-  overflow: hidden;
 }
 
 .ticker-track {
@@ -240,15 +132,6 @@ a:hover .client-logo {
   margin-bottom: 40px;
 }
 
-.team-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
 .team-card {
   background-color: white;
   border-radius: 8px;
@@ -289,13 +172,11 @@ a:hover .client-logo {
   margin: 0 auto;
   background-color: #1e293b;
   border-radius: 8px;
-  display: flex;
   overflow: hidden;
   color: white;
 }
 
 .contact-text {
-  flex: 1;
   padding: 40px;
 }
 
@@ -310,20 +191,11 @@ a:hover .client-logo {
 }
 
 .contact-form {
-  flex: 1;
   padding: 40px;
   background-color: #0f172a;
 }
 
-.form-row {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
 input, textarea {
-  width: 100%;
-  padding: 10px;
   background-color: #1e293b;
   border: 1px solid #334155;
   color: white;
@@ -339,29 +211,9 @@ input, textarea {
   font-size: 0.85rem;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
-.footer-brand {
-  flex: 2;
-  min-width: 250px;
-}
-
 .footer-brand p {
   margin-top: 15px;
   max-width: 250px;
-}
-
-.footer-links, .footer-info {
-  flex: 1;
-  min-width: 150px;
 }
 
 .footer h4 {
@@ -384,11 +236,7 @@ input, textarea {
 .footer-bottom {
   border-top: 1px solid #334155;
   padding-top: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
 }
 
 .legal-links a {
@@ -398,17 +246,6 @@ input, textarea {
 
 /* --- Simple Responsive Adjustments --- */
 @media (max-width: 768px) {
-  .nav-container, .contact-container, .form-row {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .nav-links {
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .hero h1 {
     font-size: 2rem;
   }
