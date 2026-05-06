@@ -1,10 +1,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { 
-  font-family: Arial, sans-serif; color: #333; line-height: 1.6; background-color: #f8f9fa; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.8; background-color: #f8f9fa; 
 }
 a { text-decoration: none; }
 ul { list-style: none; }
+button { cursor: pointer; }
 
 .navbar { background-color: #1e293b; }
 .logo-bold { font-weight: bold; font-size: 1.2rem; }
@@ -21,15 +22,16 @@ ul { list-style: none; }
   background-color: #0f172a; color: white; padding: 100px 20px; overflow: hidden;
 }
 .hero h1 { 
-  font-size: 2.5rem; max-width: 500px; line-height: 1.2; margin-bottom: 20px; 
+  font-size: 3.2rem; max-width: 500px; line-height: 1.1; margin-bottom: 20px; font-weight: 800; letter-spacing: -0.5px; 
 }
 .highlight { 
-  color: #4da6ff; text-shadow: 0 0 10px rgba(77, 166, 255, 0.3); 
+  color: #4da6ff; text-shadow: 0 0 20px rgba(77, 166, 255, 0.4); background: linear-gradient(135deg, #4da6ff, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; 
 }
 .hero p { 
-  max-width: 450px; margin-bottom: 30px; color: #e2e8f0; 
+  max-width: 450px; margin-bottom: 30px; color: #e2e8f0; font-size: 1.1rem; font-weight: 300; 
 }
-.btn-primary:hover { background-color: #0369a1; }
+.btn-primary { background-color: #0284c7; color: white; padding: 14px 32px; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3); }
+.btn-primary:hover { background-color: #0369a1; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(2, 132, 199, 0.5); }
 
 .trust-section { 
   text-align: center; padding: 50px 20px; background-color: #0f172a; overflow: hidden; 
@@ -53,22 +55,23 @@ a:hover .client-logo {
 .ticker-track:hover { animation-play-state: paused; }
 
 .team-section { 
-  background-color: white; padding: 60px 20px; text-align: center; 
+  background-color: white; padding: 80px 20px; text-align: center; 
 }
 .team-section h2 { 
-  font-size: 2rem; margin-bottom: 40px; 
+  font-size: 2.5rem; margin-bottom: 50px; font-weight: 800; color: #0f172a; 
 }
 .team-card { 
-  background-color: white; border-radius: 8px; overflow: hidden; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 300px; text-align: left; 
+  background-color: white; border-radius: 12px; overflow: hidden; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); width: 300px; text-align: left; transition: all 0.4s ease; 
 }
+.team-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); }
 .team-card img { 
-  width: 100%; height: 200px; object-fit: cover; 
+  width: 100%; height: 240px; object-fit: cover; 
 }
-.card-info { padding: 20px; }
-.card-info h3 { margin-bottom: 5px; }
+.card-info { padding: 24px; }
+.card-info h3 { margin-bottom: 8px; font-size: 1.2rem; color: #0f172a; font-weight: 700; }
 .card-info p { 
-  color: #64748b; font-size: 0.9rem; font-style: italic; 
+  color: #64748b; font-size: 0.95rem; font-style: italic; 
 }
 
 .contact-section { 
@@ -87,9 +90,10 @@ a:hover .client-logo {
 }
 .contact-form { padding: 40px; background-color: #0f172a; }
 input, textarea { 
-  background-color: #1e293b; border: 1px solid #334155; color: white; 
-  border-radius: 4px; font-family: inherit; 
+  background-color: #1e293b; border: 2px solid #334155; color: white; 
+  border-radius: 6px; font-family: inherit; padding: 12px 14px; font-size: 0.95rem; transition: all 0.3s ease; 
 }
+input:focus, textarea:focus { outline: none; border-color: #0284c7; box-shadow: 0 0 12px rgba(2, 132, 199, 0.2); background-color: #1e293b; }
 .location-output { 
   background-color: #0f172a; border: 1px solid #334155; border-radius: 8px; 
   padding: 16px; color: #e2e8f0; min-height: 58px; font-size: 0.95rem; 
@@ -97,8 +101,8 @@ input, textarea {
 .form-label { font-size: 0.9rem; margin-bottom: 8px; }
 
 .footer { 
-  background-color: #111827; color: #cbd5e1; padding: 60px 20px 30px 20px; 
-  font-size: 0.9rem; border-top: 4px solid #0284c7; 
+  background-color: #111827; color: #cbd5e1; padding: 80px 20px 40px 20px; 
+  font-size: 0.95rem; border-top: 4px solid #0284c7; 
 }
 .footer-brand p { margin-top: 15px; max-width: 300px; }
 .footer h4 { color: white; margin-bottom: 15px; }
@@ -110,9 +114,9 @@ input, textarea {
   color: white; margin-bottom: 12px; font-size: 1rem; letter-spacing: 0.03em; 
 }
 .footer-links a { 
-  color: #cbd5e1; transition: color 0.2s ease; font-size: 0.95rem; 
+  color: #cbd5e1; transition: all 0.3s ease; font-size: 0.95rem; 
 }
-.footer-links a:hover { color: white; }
+.footer-links a:hover { color: #4da6ff; padding-left: 4px; }
 .footer-map { min-height: 220px; }
 .map-address { 
   color: #94a3b8; margin-top: 12px; font-size: 0.95rem; 
@@ -139,6 +143,8 @@ input, textarea {
 .legal-links a { color: #cbd5e1; font-size: 0.9rem; }
 
 @media (max-width: 768px) { 
-  .hero h1 { font-size: 2rem; } 
-  .contact-text, .contact-form { padding: 20px; } 
+  .hero h1 { font-size: 2.2rem; } 
+  .team-section h2 { font-size: 1.8rem; }
+  .contact-text, .contact-form { padding: 24px; } 
+  .team-card { width: 100%; }
 }
